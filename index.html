@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="qrcode.js"></script>
-<script src="descargar.js"></script>
+
 </head>
 <body>
   <div class="a"><h1>Generador de QR</h1>
@@ -38,11 +38,11 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 function makeCode () {		
 	var elText = document.getElementById("text");
 	
-	if (!elText.value) {
-		alert("Input a text");
-		elText.focus();
-		return;
-	}
+	// if (!elText.value) {
+	// alert("formato invalido");
+	// elText.focus();
+	// return;
+	// }
 	
 	qrcode.makeCode(elText.value);
 }
